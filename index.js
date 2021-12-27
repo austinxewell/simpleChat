@@ -3,8 +3,9 @@ var socket = require('socket.io');
 
 // App setup
 var app = express();
-var server = app.listen(3001, function(){
-    console.log('listening to request on port 3001');
+const PORT = process.env.PORT || 3001
+var server = app.listen(PORT, function(){
+    console.log(`listening to request on port ${PORT}`);
 })
 
 //Static Fiiles
